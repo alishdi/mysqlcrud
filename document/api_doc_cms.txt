@@ -1,0 +1,210 @@
+mainUrl = http://localhost:3000/api
+
+/////////////   Start Product routes (mainUrl => /products/)  /////////////
+
+1. Add New Product
+   url => add
+   method => Post
+   req body => {
+        title => string
+        price => number
+        count => number
+        popularity => number
+        sale => number
+        colors => number
+   }
+
+2.  Get All Products
+    url => list
+    method => Get
+    res => all products array
+
+3.  Delete Product
+    url => :productID
+    method => Delete
+    req params => productID
+
+4.  Update Product
+    url => :productID
+    method => Put
+    req params => productID
+    req body => {
+        title => string
+        price => number
+        count => number
+        popularity => number
+        sale => number
+        colors => number
+   }
+
+/////////////   End Product routes (mainUrl => products/)  /////////////
+
+
+/////////////   Start Comment routes (mainUrl => comments/)  /////////////
+
+1. Add New Comment
+   url => add
+   method => Post
+   req body => {
+        title => string
+        body => string
+        date => string
+        hour => string
+        userID => number
+        productID => number
+   }
+
+2.  Get All Comments
+    url => list
+    method => Get
+    res => all Comments array
+
+3.  Delete Comment
+    url => :commentID
+    method => Delete
+    req params => commentID
+
+4.  Update Comment
+    url => :commentID
+    method => Put
+    req params => commentID
+    req body => {
+        body => string
+   }
+
+/////////////   End Comment routes (mainUrl => comments/)  /////////////
+
+
+/////////////   Start Off routes (mainUrl => offs/)  /////////////
+
+1. Add New Off
+   url => add
+   method => Post
+   req body => {
+        code => string
+        percent => number
+        date => string
+        isActive => number
+        userID => number
+        productID => number
+   }
+
+2.  Get All Offs
+    url => list
+    method => Get
+    res => all Offs array
+
+3.  Delete Off
+    url => :offID
+    method => Delete
+    req params => offID
+
+4.  Update Comment
+    url => active-off/:offID/:isActive
+    method => Put
+    req params => offID
+    req params => isActive => 0 || 1
+
+    
+
+/////////////   End Off routes (mainUrl => offs/)  /////////////
+
+
+/////////////   Start Order routes (mainUrl => orders/)  /////////////
+
+1. Add New order
+   url => add
+   method => Post
+   req body => {
+        userID => number
+        productID => number
+        date => string
+        hour => string
+        price => number
+        off => number
+        sale => number
+        popularity => number
+        count => number
+        isActive => number
+   }
+
+2.  Get All Orders
+    url => list
+    method => Get
+    res => all Orders array
+
+3.  Delete Off
+    url => :orderID
+    method => Delete
+    req params => orderID
+
+4.  Update Comment
+    url => active-order/:orderID/:isActive
+    method => Put
+    req params => orderID
+    req params => isActive => 0 || 1
+
+    
+
+/////////////   End Order routes (mainUrl => orders/)  /////////////
+
+
+/////////////   Start Users routes (mainUrl => users/)  /////////////
+
+1. Add New order
+   url => add
+   method => Post
+   req body => {
+        first_name => string
+        last_name => string
+        username => string
+        password => string
+        phone => number
+        city => string
+        email => string
+        address => number
+        score => number
+   }
+
+2.  Get All Users
+    url => list
+    method => Get
+    res => all Users array
+
+3.  Delete User
+    url => :userID
+    method => Delete
+    req params => userID
+
+4.  Update Comment
+    url => :userID
+    method => Put
+    req params => userID
+    req body => {
+        first_name => string
+        last_name => string
+        username => string
+        password => string
+        phone => number
+        city => string
+        email => string
+        address => number
+        score => number
+   }
+
+    
+
+/////////////   End Users routes (mainUrl => users/)  /////////////
+
+
+/////////////   Start Admins routes (mainUrl => admins/)  /////////////
+
+1.  Get All Admins
+    url => list
+    method => Get
+    res => all Users array
+
+
+    
+
+/////////////   End Admins routes (mainUrl => admins/)  /////////////

@@ -1,0 +1,75 @@
+1.Products
+    id
+    title
+    price
+    count
+    img
+    popularity
+    sale
+    colors
+    desc
+    categoryID(foreign key => id (Categories))
+
+2.Comments
+    id
+    body
+    date 
+    hour
+    userID(foreign key => id (Users))
+    productID(foreign key => id (Products))
+
+3.Users
+    id
+    first_name
+    last_name
+    username
+    password
+    phone
+    email
+    city
+    address
+    score
+    buy
+
+4.Orders
+    id
+    productID(foreign key => id (Products))
+    userID(foreign key => id (Users))
+    date
+    hour
+    price
+    off
+    sale
+    popularity
+    count
+    sale_count
+
+5.Offs
+    id
+    code
+    percent
+    adminID(foreign key => id (Users))
+    productID(foreign key => id (Products))
+    date
+
+    6.Admins
+    id
+    first_name
+    last_name
+    username
+    password
+    task
+
+6.Categories
+    id
+    title
+
+7.Baskets
+    id
+    productID(foreign key => id (Products))
+    userID(foreign key => id (Users))
+    productImg(foreign key => img (Products))
+    productTitle(foreign key => title (Products))
+    productPrice(foreign key => price (Products))
+    productUrl(foreign key => url (Products))
+    count
